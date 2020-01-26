@@ -82,7 +82,20 @@ body {
 .section_about,
 .section_name {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+}
+
+.section_name {
+    justify-content: space-between;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Montserrat";
+    line-height: 50px;
+    margin-bottom: 50px;
+    color: black;
+    font-weight: bold;
+
 }
 
 .products {
@@ -91,17 +104,251 @@ body {
 }
 
 .section_about {
-    font-family: "Kaushan script";
+    font-family: "Kaushan Script";
+    justify-content: space-between;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
 }
 
 .products_list {
     display: flex;
     flex-flow: row wrap;
     height: 250px;
+    justify-content: space-between;
     
 }
 
 .product_item {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    
 }
+
+.product_cart {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img {
+    margin: 0 30px;
+    vertical-align: middle;
+    width: 32px;
+}
+
+
+.product_topic {
+    justify-content: flex-start;
+    vertical-align: bottom;
+    max-width: 300px;
+    width: 100%;
+}
+
+.topic_name {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+}
+
+.section_name::after {
+    display: table;
+    content: "";
+    width: 60px;
+    height: 4px;
+    margin: 0 auto;
+    border: solid 2px;
+    border-color: black;
+    background-color: black;
+}
+
+.team {
+    padding: 100px 0;
+    border-bottom: 1px solid color #e5e5e5;
+}
+
+.team_description {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    max-width: 980px;
+    text-align: center;
+    margin: 95px auto;
+    font-size: 15px;
+    color: black;
+}
+
+.team_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.team_list_item {
+    display: flex ;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.employee {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    transition: 0.3s linear;
+}
+
+.team_list_item:hover .employee {
+    transform: translate(-10px, -10px);
+}
+
+.employee_image {
+    width: 380;
+    height: 470;
+    display: flex;
+    object-fit: cover;
+}
+
+.profile_links {
+    display: flex;
+    flex-flow: row wrap;
+    width: 380px;
+    height: 470px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+    opacity: 0;
+    z-index: 1; 
+    align-items: center;
+    position: absolute;
+    transition: 0.3s linear;
+
+}
+
+.team_list_item:hover .profile_links {
+    box-shadow: 10px 10px 0 black;
+}
+
+.team_list_item:hover .profile_links,
+.team_list_item:focus .profile_links {
+    opacity: 1;
+}
+
+.facebook {
+    background-image: url("../images/fc.jpg");
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    top: 45%;
+    left: 20%;
+    /* background: transparent; */
+}
+
+.facebook:hover,
+.twitter:hover, 
+.instagram:hover,
+.pinterest:hover {
+    background-color: black;
+    border: none;
+    width: 55px;
+    height: 55px;
+}
+
+.twitter {
+    background-image: url("../images/tw.jpg");
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    top: 45%;
+    left: 35%;
+    /* background: transparent; */
+}
+
+.instagram {
+    background-image: url("../images/9c9eff02-f845-4e49-b455-f9f42ce76d21.jpg");
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:white;
+    top: 45%;
+    left: 50%;
+    /* background: transparent; */
+}
+
+.pinterest {
+    background-image: url("../images/pinterest.jpg");
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:white;
+    top: 45%;
+    left: 65%;
+    /* background: transparent; */
+}
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer_text {
+    margin: auto 0;
+    font-family: "Montserrat";
+}
+
+span {
+    font-size: 14;
+    color: black;
+    font-weight: bold;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    vertical-align: bottom;
+    margin: 12px 0;
+}
+
+.text {
+    width: 230px;
+    height: 44px;
+    font-size: 14px;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    border-right: none;   
+    font-weight: bold;
+}
+
+.btn {
+    width: 150px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    font-weight: bold;
+} 
